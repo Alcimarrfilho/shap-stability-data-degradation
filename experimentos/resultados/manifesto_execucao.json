@@ -1,0 +1,16 @@
+{
+  "environment": {
+    "python": "3.13.15",
+    "platform": "Windows-10-10.0.19045-SP0",
+    "numpy": "2.3.4",
+    "pandas": "2.3.3",
+    "scikit_learn": "1.7.2",
+    "xgboost": "3.1.1",
+    "shap": "0.54.1",
+    "scipy": "1.16.3",
+    "matplotlib": "3.10.7"
+  },
+  "dataset_path": "dados\\brutos\\bank_marketing_uci\\bank\\bank-full.csv",
+  "dataset_sha256": "d1513ec63b385506f7cfce9f2c5caa9fe99e7ba4e8c3fa264b3aaf0f849ed32d",
+  "protocol_status": "congelado"
+}

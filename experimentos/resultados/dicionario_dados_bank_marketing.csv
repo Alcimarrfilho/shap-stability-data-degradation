@@ -1,0 +1,18 @@
+﻿variavel,papel,tipo_documentado,tipo_pandas,descricao,valores_distintos
+age,atributo preditivo,numérico,int64,idade do cliente,77
+job,atributo preditivo,categórico,object,tipo de ocupação,12
+marital,atributo preditivo,categórico,object,estado civil,3
+education,atributo preditivo,categórico,object,nível de escolaridade,4
+default,atributo preditivo,binário,object,possui crédito em inadimplência,2
+balance,atributo preditivo,numérico,int64,"saldo médio anual, em euros",7168
+housing,atributo preditivo,binário,object,possui financiamento habitacional,2
+loan,atributo preditivo,binário,object,possui empréstimo pessoal,2
+contact,atributo preditivo,categórico,object,tipo de comunicação do contato,3
+day,atributo preditivo,numérico,int64,dia do mês do último contato,31
+month,atributo preditivo,categórico,object,mês do último contato,12
+duration,atributo preditivo,numérico,int64,"duração do último contato, em segundos",1573
+campaign,atributo preditivo,numérico,int64,"contatos nesta campanha, incluindo o último",48
+pdays,atributo preditivo,numérico,int64,dias desde contato anterior; -1 indica sem contato anterior,559
+previous,atributo preditivo,numérico,int64,contatos antes da campanha atual,41
+poutcome,atributo preditivo,categórico,object,resultado da campanha anterior,4
+y,alvo,alvo binário,object,contratação do depósito a prazo,2

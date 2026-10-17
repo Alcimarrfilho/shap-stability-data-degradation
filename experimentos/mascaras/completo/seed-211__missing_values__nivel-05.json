@@ -1,0 +1,10 @@
+{
+  "mask_id": "seed-211__missing_values__nivel-05",
+  "created_at_utc": "2026-10-17T06:05:13.492368+00:00",
+  "seed": 211,
+  "derived_seed": 4139529388,
+  "degradation": "missing_values",
+  "level": 0.05,
+  "changed_items": 18777,
+  "train_rows": 27126
+}

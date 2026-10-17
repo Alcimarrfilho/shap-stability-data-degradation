@@ -1,0 +1,88 @@
+{
+  "H1": {
+    "confirmed": true,
+    "models_meeting_threshold": [
+      "logistic_regression",
+      "random_forest",
+      "xgboost"
+    ],
+    "mean_delta_by_model": {
+      "logistic_regression": -0.5971154964847886,
+      "random_forest": -0.05113512055018336,
+      "xgboost": -0.38029088007069767
+    }
+  },
+  "H2": {
+    "confirmed": false,
+    "matching_scenarios": []
+  },
+  "H3": {
+    "confirmed": true,
+    "degradation_types_meeting_threshold": [
+      "attribute_errors",
+      "label_noise",
+      "missing_values"
+    ],
+    "matching_runs": [
+      {
+        "modelo": "logistic_regression",
+        "degradacao": "attribute_errors",
+        "mean_shap_global_l1_normalized": 0.4243160266059389,
+        "baseline_p95": 0.11834802801377119
+      },
+      {
+        "modelo": "logistic_regression",
+        "degradacao": "label_noise",
+        "mean_shap_global_l1_normalized": 0.48965977754450296,
+        "baseline_p95": 0.11834802801377119
+      },
+      {
+        "modelo": "logistic_regression",
+        "degradacao": "missing_values",
+        "mean_shap_global_l1_normalized": 0.142030492728897,
+        "baseline_p95": 0.11834802801377119
+      },
+      {
+        "modelo": "random_forest",
+        "degradacao": "attribute_errors",
+        "mean_shap_global_l1_normalized": 0.35376185494972046,
+        "baseline_p95": 0.06411432528504372
+      },
+      {
+        "modelo": "random_forest",
+        "degradacao": "label_noise",
+        "mean_shap_global_l1_normalized": 0.35074194551362703,
+        "baseline_p95": 0.06411432528504372
+      },
+      {
+        "modelo": "random_forest",
+        "degradacao": "missing_values",
+        "mean_shap_global_l1_normalized": 0.12586404265515794,
+        "baseline_p95": 0.06411432528504372
+      },
+      {
+        "modelo": "xgboost",
+        "degradacao": "attribute_errors",
+        "mean_shap_global_l1_normalized": 0.2775206757870299,
+        "baseline_p95": 0.07215834043466035
+      },
+      {
+        "modelo": "xgboost",
+        "degradacao": "label_noise",
+        "mean_shap_global_l1_normalized": 0.38141125911351137,
+        "baseline_p95": 0.07215834043466035
+      },
+      {
+        "modelo": "xgboost",
+        "degradacao": "missing_values",
+        "mean_shap_global_l1_normalized": 0.12710773088436134,
+        "baseline_p95": 0.07215834043466035
+      }
+    ],
+    "baseline_l1_p95_by_model": {
+      "logistic_regression": 0.11834802801377119,
+      "random_forest": 0.06411432528504372,
+      "xgboost": 0.07215834043466035
+    }
+  }
+}

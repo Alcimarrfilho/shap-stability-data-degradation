@@ -1,0 +1,34 @@
+{
+  "source": {
+    "fonte": "UCI Machine Learning Repository — Bank Marketing",
+    "url": "https://archive.ics.uci.edu/dataset/222/bank%2Bmarketing",
+    "doi": "10.24432/C5K306",
+    "licenca": "CC BY 4.0",
+    "arquivo": "<PROJECT_ROOT>\\experimentos\\dados\\brutos\\bank_marketing_uci\\bank\\bank-full.csv",
+    "sha256": "d1513ec63b385506f7cfce9f2c5caa9fe99e7ba4e8c3fa264b3aaf0f849ed32d",
+    "linhas": 45211,
+    "colunas": 17
+  },
+  "duplicate_rows": 0,
+  "null_values": 0,
+  "unknown_by_column": {
+    "poutcome": 36959,
+    "contact": 13020,
+    "education": 1857,
+    "job": 288
+  },
+  "target_counts": {
+    "no": 39922,
+    "yes": 5289
+  },
+  "validity_rule_violations": {
+    "age > 0": 0,
+    "1 <= day <= 31": 0,
+    "duration >= 0": 0,
+    "campaign >= 1": 0,
+    "pdays >= -1": 0,
+    "previous >= 0": 0,
+    "y em {'yes','no'}": 0
+  },
+  "primary_protocol_excludes_duration": true
+}

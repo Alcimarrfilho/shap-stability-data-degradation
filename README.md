@@ -43,14 +43,18 @@ de treinamento são progressivamente degradados.
 - `experimentos/RELATORIO_EXECUCAO_COMPLETA.md`: síntese técnica dos achados;
 - `experimentos/src/`: implementação das degradações, treinamento e SHAP;
 - `experimentos/tests/`: testes automatizados;
+- `experimentos/dados/brutos/`: arquivos originais efetivamente usados;
+- `experimentos/modelos/`: pipelines treinados e configuração congelada;
+- `experimentos/mascaras/`: máscaras reproduzíveis das degradações;
 - `experimentos/resultados/completo/`: tabelas, métricas e figuras finais.
 
 ## Dados e reprodutibilidade
 
 A base Bank Marketing é obtida do UCI Machine Learning Repository, DOI
-`10.24432/C5K306`, sob licença CC BY 4.0. Os dados brutos não são versionados.
-A origem, o hash, as sementes, os hiperparâmetros e as versões das bibliotecas
-ficam registrados nos artefatos do experimento.
+`10.24432/C5K306`, sob licença CC BY 4.0. Os dois arquivos originais usados na
+execução são versionados para permitir a reprodução exata. A origem, o hash, as
+sementes, os hiperparâmetros e as versões das bibliotecas ficam registrados nos
+artefatos do experimento.
 
 ## Testes
 

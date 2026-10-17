@@ -1,0 +1,10 @@
+{
+  "mask_id": "seed-47__label_noise__nivel-20",
+  "created_at_utc": "2026-10-17T05:51:09.520798+00:00",
+  "seed": 47,
+  "derived_seed": 1289999558,
+  "degradation": "label_noise",
+  "level": 0.2,
+  "changed_items": 5424,
+  "train_rows": 27126
+}

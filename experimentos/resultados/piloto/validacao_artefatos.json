@@ -1,0 +1,8 @@
+{
+  "modo": "piloto",
+  "expected_runs": 9,
+  "found_runs": 9,
+  "expected_masks": 6,
+  "errors": [],
+  "valid": true
+}

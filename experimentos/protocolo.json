@@ -1,0 +1,42 @@
+{
+  "status": "congelado",
+  "pilot_execution_allowed": true,
+  "title": "Efeito de degradações controladas na qualidade dos dados de treinamento sobre o desempenho preditivo e a estabilidade de explicações SHAP: um estudo experimental com dados tabulares",
+  "dataset": {
+    "name": "Bank Marketing",
+    "doi": "10.24432/C5K306",
+    "file": "dados/brutos/bank_marketing_uci/bank/bank-full.csv",
+    "separator": ";",
+    "target": "y",
+    "excluded_main_predictors": ["duration"],
+    "legitimate_category_values": ["unknown"]
+  },
+  "split": {
+    "fixed_test_fraction": 0.2,
+    "fixed_test_seed": 20260929,
+    "validation_fraction_of_development": 0.25,
+    "stratified": true
+  },
+  "experimental_seeds": [11, 29, 47, 71, 101, 131, 173, 211, 257, 307],
+  "models": ["logistic_regression", "random_forest", "xgboost"],
+  "degradations": ["missing_values", "attribute_errors", "label_noise"],
+  "levels": [0.05, 0.1, 0.2, 0.3],
+  "primary_metric": "macro_f1",
+  "complementary_metrics": ["pr_auc", "balanced_accuracy", "roc_auc"],
+  "shap_test_sample_size": 500,
+  "threshold_grid": {
+    "start": 0.05,
+    "stop": 0.95,
+    "step": 0.01,
+    "tie_break": "closest_to_0.50"
+  },
+  "pilot": {
+    "model": "random_forest",
+    "degradation": "missing_values",
+    "levels": [0.1, 0.3],
+    "seeds": [11, 29, 47],
+    "includes_clean_baseline": true,
+    "training_count": 9
+  },
+  "scenario_seed_derivation": "sha256('{seed}|{degradation}|{level}') first 8 hex digits"
+}

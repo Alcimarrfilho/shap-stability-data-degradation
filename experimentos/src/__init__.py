@@ -1,0 +1,1 @@
+"""Componentes reproduzíveis do experimento."""

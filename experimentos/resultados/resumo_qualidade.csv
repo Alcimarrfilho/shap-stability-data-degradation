@@ -1,0 +1,6 @@
+﻿verificacao,valor,observacao
+linhas,45211,registros no arquivo
+colunas,17,16 atributos + alvo
+nulos reais,0,NaN/None detectados pelo pandas
+linhas duplicadas exatas,0,duplicidade em todas as 17 colunas
+categorias 'unknown',52124,soma de ocorrências por coluna; não equivale a linhas únicas

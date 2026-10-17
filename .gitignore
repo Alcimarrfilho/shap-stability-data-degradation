@@ -1,0 +1,34 @@
+# Ambientes e arquivos temporários Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+experimentos/.matplotlib/
+
+# Dados processados temporários
+experimentos/dados/processados/
+
+# Exportações e pacotes redundantes
+*.zip
+*.mp4
+*.pdf
+*.html
+
+# Arquivos auxiliares do LaTeX
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# Sistema operacional e editores
+.DS_Store
+Thumbs.db
+*.swp
+

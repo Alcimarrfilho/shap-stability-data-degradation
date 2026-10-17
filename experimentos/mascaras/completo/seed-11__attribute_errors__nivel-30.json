@@ -1,0 +1,10 @@
+{
+  "mask_id": "seed-11__attribute_errors__nivel-30",
+  "created_at_utc": "2026-10-17T05:43:58.378727+00:00",
+  "seed": 11,
+  "derived_seed": 112472839,
+  "degradation": "attribute_errors",
+  "level": 0.3,
+  "changed_items": 122067,
+  "train_rows": 27126
+}

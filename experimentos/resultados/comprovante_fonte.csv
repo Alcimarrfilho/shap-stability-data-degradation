@@ -1,0 +1,2 @@
+﻿fonte,url,doi,licenca,arquivo,sha256,linhas,colunas
+UCI Machine Learning Repository — Bank Marketing,https://archive.ics.uci.edu/dataset/222/bank%2Bmarketing,10.24432/C5K306,CC BY 4.0,<PROJECT_ROOT>\experimentos\dados\brutos\bank_marketing_uci\bank\bank-full.csv,d1513ec63b385506f7cfce9f2c5caa9fe99e7ba4e8c3fa264b3aaf0f849ed32d,45211,17

@@ -1,0 +1,14 @@
+{
+  "model": "random_forest",
+  "seed": 11,
+  "n_observations": 50,
+  "exact_seconds": 24.73812689999977,
+  "approximate_seconds": 0.14389120000123512,
+  "shap_global_spearman": 0.9535714285714283,
+  "shap_global_jaccard_top5": 1.0,
+  "shap_global_l1_normalized": 0.14644689587057186,
+  "shap_local_cosine_mean": 0.9766064123781062,
+  "shap_local_cosine_median": 0.9810315009598966,
+  "shap_local_sign_agreement_mean": 0.8893333333333332,
+  "accepted": true
+}
