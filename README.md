@@ -1,73 +1,67 @@
-# TCC — qualidade de dados e estabilidade de explicações SHAP
+# SHAP Stability under Data Degradation
 
-Repositório de desenvolvimento do Trabalho de Conclusão de Curso de Alcimar
-Rosal Benvindo Filho, orientado pelo professor Francisco Luciani de Miranda
-Vieira.
+Projeto experimental e reproduzível sobre o efeito de degradações controladas
+nos dados de treinamento, tanto no desempenho preditivo quanto na estabilidade
+de explicações SHAP em dados tabulares.
 
-## Tema
+## Objetivo
 
-**Efeito de degradações controladas na qualidade dos dados de treinamento
-sobre o desempenho preditivo e a estabilidade de explicações SHAP: um estudo
-experimental com dados tabulares.**
+Avaliar como diferentes problemas de qualidade de dados alteram modelos de
+classificação e verificar se as explicações permanecem estáveis quando os dados
+de treinamento são progressivamente degradados.
 
-## Estado do trabalho
+## Desenho experimental
 
-- título, problema, objetivo e escopo experimental revisados;
-- base Bank Marketing auditada e documentada;
-- protocolo experimental aprovado e congelado;
-- rotinas auditáveis para valores ausentes, erros nos atributos e ruído nos
-  rótulos, com testes automatizados;
-- artigo em desenvolvimento no modelo do iCEV;
-- piloto de 9 treinamentos concluído e auditado;
-- matriz completa de 390 treinamentos concluída e auditada;
-- métricas preditivas, SHAP, estabilidade, testes estatísticos, tabelas e
-  gráficos gerados;
-- H1 e H3 confirmadas; H2 refutada segundo os critérios pré-registrados.
-
-Os resultados completos e sua trilha de auditoria estão em
-`experimentos/resultados/completo/`.
-
-## Escopo planejado
-
+- base: Bank Marketing, do UCI Machine Learning Repository;
 - modelos: Regressão Logística, Random Forest e XGBoost;
 - degradações: valores ausentes, erros nos atributos e ruído nos rótulos;
 - níveis: 5%, 10%, 20% e 30%;
 - repetições: dez sementes pareadas;
 - desempenho principal: Macro-F1;
-- explicações: estabilidade global e local de atribuições SHAP;
-- matriz completa executada: 390 treinamentos;
-- piloto executado: Random Forest, valores ausentes, níveis de 10% e 30%, três
-  sementes e seus baselines, totalizando nove treinamentos.
+- explicações: estabilidade global e local das atribuições SHAP;
+- cenário principal sem o atributo `duration`;
+- conjunto de teste limpo e fixo.
 
-## Estrutura principal
+## Estado atual
+
+- base auditada e documentada;
+- protocolo experimental congelado;
+- degradações implementadas com testes automatizados;
+- piloto de 9 treinamentos concluído;
+- matriz completa de 390 treinamentos concluída;
+- 120 máscaras de degradação validadas;
+- métricas preditivas, SHAP, estabilidade, testes estatísticos, tabelas e
+  gráficos gerados;
+- H1 e H3 confirmadas e H2 refutada segundo os critérios pré-registrados.
+
+## Estrutura
 
 - `experimentos/PROTOCOLO_EXPERIMENTAL.md`: protocolo científico e estatístico;
-- `experimentos/protocolo.json`: parâmetros estruturados do protocolo;
+- `experimentos/protocolo.json`: parâmetros estruturados;
 - `experimentos/01_auditoria_bank_marketing.ipynb`: auditoria inicial da base;
-- `experimentos/02_resultados_experimento.ipynb`: resultados executados;
-- `experimentos/RELATORIO_EXECUCAO_COMPLETA.md`: síntese dos achados;
-- `experimentos/src/degradacoes.py`: implementação das degradações;
-- `experimentos/tests/`: testes das regras de degradação;
-- `modelo-icev-esw-main/2026/artigo-cientifico-tcc/`: fonte LaTeX do artigo.
+- `experimentos/02_resultados_experimento.ipynb`: análise dos resultados;
+- `experimentos/RELATORIO_EXECUCAO_COMPLETA.md`: síntese técnica dos achados;
+- `experimentos/src/`: implementação das degradações, treinamento e SHAP;
+- `experimentos/tests/`: testes automatizados;
+- `experimentos/resultados/completo/`: tabelas, métricas e figuras finais.
 
 ## Dados e reprodutibilidade
 
 A base Bank Marketing é obtida do UCI Machine Learning Repository, DOI
-`10.24432/C5K306`, sob licença CC BY 4.0. Os arquivos brutos não são
-versionados. A origem, o hash e a auditoria ficam registrados pelos artefatos
-do experimento. Sementes, divisões, máscaras, hiperparâmetros, limiares e
-versões das bibliotecas deverão ser preservados em cada execução.
+`10.24432/C5K306`, sob licença CC BY 4.0. Os dados brutos não são versionados.
+A origem, o hash, as sementes, os hiperparâmetros e as versões das bibliotecas
+ficam registrados nos artefatos do experimento.
 
-## Testes disponíveis
+## Testes
 
-Na raiz deste repositório:
+Na raiz do projeto:
 
 ```powershell
 python -m unittest discover -s experimentos/tests -v
 ```
 
-## Situação do protocolo
+Para validar os artefatos da execução completa:
 
-O orientador aprovou o protocolo, conforme confirmação do aluno em 17/10/2026.
-As emendas estritamente computacionais observadas durante o piloto e a primeira
-tentativa da matriz estão registradas na Seção 13 do protocolo.
+```powershell
+python experimentos/validate_outputs.py completo
+```
